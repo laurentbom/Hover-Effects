@@ -1,6 +1,6 @@
 # Hover-Effects with Sass
 
-## On a picture
+## On a picture ##
 
 - Color Filter
 - Scale Image
@@ -10,7 +10,7 @@
 - Pop a box with cubic bezier transition
 - Lines mouvements
 
-### On text
+### On text ###
 
 - Text Color
 - Text Backround
