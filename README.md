@@ -12,3 +12,7 @@
 
 ### On text
 
+- Text Color
+- Text Backround
+- Text Outline
+

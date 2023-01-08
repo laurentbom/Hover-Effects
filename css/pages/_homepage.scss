@@ -67,7 +67,7 @@
   }
 }
 
-/**************Texte Backround********************/
+/**************Text Backround********************/
 .hv3{
   .pop-txt3{
     margin: 0;
@@ -141,6 +141,48 @@
   &:hover::after{
     transform: translate(-50%, -50%) rotate(-45deg);
   }
-
 }
+
+/**************Texte Color********************/
+.txt-color{
+  a{
+    transition: .3s all ease-in-out;
+  }
+  &:hover a{
+    color: crimson;
+  }
+}
+
+/**************Texte Backround********************/
+.txt-backround{
+  transition: .3s all ease-in-out;
+  a{
+    display: inline-block;
+    padding: 15px 25px;
+  }
+  &:hover{
+    background-color: crimson;
+  }
+}
+/**************Texte Outline********************/
+.txt-outline{
+  position: relative;
+  a:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: -5px; //outline and text distance
+    left: 0;
+    background-color: crimson;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  a:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+}
+
 
