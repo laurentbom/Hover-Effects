@@ -1,0 +1,146 @@
+/*******************************************/
+/**************Hover Effects****************/
+/*******************************************/
+
+/**************Color Filter*****************/
+.color-filter{
+  position: relative;
+  a::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    opacity: 0;
+    transition: .3s all ease-in-out;
+  }
+  &:hover a:after{  //after fonctionne pas avec balises autofermantes
+    opacity: 0.2;   //prendre a ou figure comme balises
+  }
+}
+
+/**************Scale Image*******************/
+.scale-img:hover img{
+  transform: scale(1.2); //overflow hidden sur container
+  transition: 1s all ease-in-out;
+}
+
+/**************Pop Texte 1********************/
+.pop-txt1{
+  position: relative;
+  span{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: yellowgreen;
+    font-weight: 700;
+    font-size: 36px;
+    opacity: 0;
+    transition: 0.3s all ease-in;
+    white-space: nowrap;
+  }
+  &:hover span{
+    opacity: 1;
+  }
+}
+
+/**************Pop Texte 2********************/
+.pop-txt2{
+  position: relative;
+  div{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%,100%);
+    color: #303030;
+    background-color: yellowgreen;
+    padding: 20px;
+    white-space: nowrap;
+    text-align: center;
+    transition: .4s all ease-in-out;
+  }
+  &:hover div{
+    transform: translate(-50%,0%);
+  }
+}
+
+/**************Texte Backround********************/
+.hv3{
+  .pop-txt3{
+    margin: 0;
+  }
+  p{
+    margin: 0;
+    padding: 16px 0;
+    transition: .3s all ease-in-out;
+  }
+}
+.hv3:hover{
+  p{
+    background-color: yellowgreen;
+    color: #303030;
+    width: 100%;
+  }
+  
+}
+
+/**************Pop Box Cubic Bezier********************/
+.pop-box {
+  position: relative;
+  &::before{
+    content: '';
+    height: 0;
+    width: 0;
+    background-color: lightblue;
+    border: 2px solid lightgray;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: all .5s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+  }
+  &:hover::before{
+    width: 80%;
+    height: 80%;
+    opacity: 0.3;
+  }
+}
+
+/**************Lines Mouvements********************/
+.lines-moves{
+  position: relative;
+  &::before{
+    content: '';
+    width: 60%;
+    height: 1px;
+    background-color: rgba(255, 249, 249, 0.623);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.3s all ease-in;
+  }
+  &:hover::before{
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+  &::after{
+    content: '';
+    width: 60%;
+    height: 1px;
+    background-color: rgba(255, 249, 249, 0.623);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.3s all ease-in;
+  }
+  &:hover::after{
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+
+}
+

@@ -1,0 +1,30 @@
+body{
+  background-color: #303030;
+  font-family: 'Poppins', sans-serif;
+}
+// Disposition images et textes
+main{
+  width: 1060px;
+  margin: 0px auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  column-gap: 20px;
+  flex-wrap: wrap;
+  .hov-container{
+    text-align: center;
+    margin-bottom: 40px;
+    p{
+      font-weight: 700;
+      color: yellowgreen;
+    }
+  }
+  .hov-effect{
+    width: 250px;
+    overflow: hidden;
+  }
+  img{
+    width: 100%;
+    display: block;
+  }
+}
