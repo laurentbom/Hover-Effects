@@ -22,6 +22,9 @@
 }
 
 /**************Scale Image*******************/
+.scale-img img{
+  transition: 1s all ease-in-out;
+}
 .scale-img:hover img{
   transform: scale(1.2); //overflow hidden sur container
   transition: 1s all ease-in-out;
